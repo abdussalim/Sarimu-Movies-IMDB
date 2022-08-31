@@ -2,7 +2,7 @@ $('.input-keyword').on('keyup', function(){
     $.ajax({
         type: "GET",
         headers: {"Access-Control-Allow-Origin":"*"}, 
-        url: 'https://www.omdbapi.com/?apikey=82ba570c&s=' + $('.input-keyword').val(),
+        url: 'http://www.omdbapi.com/?apikey=82ba570c&s=' + $('.input-keyword').val(),
         success: results => {
             const movies = results.Search;
             let cards = '';
@@ -17,7 +17,7 @@ $('.input-keyword').on('keyup', function(){
                 $.ajax({
                     type: "GET",
                     headers: {"Access-Control-Allow-Origin":"*"},
-                    url: 'https://www.omdbapi.com/?apikey=82ba570c&i='+$(this).data('imdbid'),
+                    url: 'http://www.omdbapi.com/?apikey=82ba570c&i='+$(this).data('imdbid'),
                     success: m => {
                         const movieDetails = showMovieDetails(m);
                     $('.modal-body').html(movieDetails);
