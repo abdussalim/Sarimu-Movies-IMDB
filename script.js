@@ -1,8 +1,7 @@
-header('Access-Control-Allow-Origin: *'); 
-header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
-
 $('.input-keyword').on('keyup', function(){
     $.ajax({
+        type: "GET",
+        headers: {"Access-Control-Allow-Origin":"*"}, 
         url: 'https://www.omdbapi.com/?apikey=82ba570c&s=' + $('.input-keyword').val(),
         success: results => {
             const movies = results.Search;
@@ -16,6 +15,8 @@ $('.input-keyword').on('keyup', function(){
             //when details button clicked
             $('.modal-details-button').on('click', function(){
                 $.ajax({
+                    type: "GET",
+                    headers: {"Access-Control-Allow-Origin":"*"},
                     url: 'https://www.omdbapi.com/?apikey=82ba570c&i='+$(this).data('imdbid'),
                     success: m => {
                         const movieDetails = showMovieDetails(m);
