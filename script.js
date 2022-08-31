@@ -1,3 +1,6 @@
+header('Access-Control-Allow-Origin: *'); 
+header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
+
 $('.input-keyword').on('keyup', function(){
     $.ajax({
         url: 'https://www.omdbapi.com/?apikey=82ba570c&s=' + $('.input-keyword').val(),
