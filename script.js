@@ -13,7 +13,7 @@ $('.input-keyword').on('keyup', function(){
             //when details button clicked
             $('.modal-details-button').on('click', function(){
                 $.ajax({
-                    url: 'http://www.omdbapi.com/?apikey=82ba570c&i='+$(this).data('imdbid'),
+                    url: 'https://www.omdbapi.com/?apikey=82ba570c&i='+$(this).data('imdbid'),
                     success: m => {
                         const movieDetails = showMovieDetails(m);
                     $('.modal-body').html(movieDetails);
