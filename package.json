@@ -1,0 +1,22 @@
+{
+  "name": "sarimumovies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdussalim/Sarimu-Movies-IMDB.git"
+  },
+  "author": "Sarimu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdussalim/Sarimu-Movies-IMDB/issues"
+  },
+  "homepage": "https://github.com/abdussalim/Sarimu-Movies-IMDB#readme",
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
+}

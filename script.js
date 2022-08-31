@@ -1,6 +1,6 @@
 $('.input-keyword').on('keyup', function(){
     $.ajax({
-        url: 'http://www.omdbapi.com/?apikey=82ba570c&s=' + $('.input-keyword').val(),
+        url: 'https://www.omdbapi.com/?apikey=82ba570c&s=' + $('.input-keyword').val(),
         success: results => {
             const movies = results.Search;
             let cards = '';
